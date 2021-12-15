@@ -6,16 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <script async defer src='https://www.google.com/recaptcha/api.js'></script>
-    <script>
-        function onSubmit(token) {
-          alert("Submitted successfully!")
-        }
-      </script>
+    <script defer src="app.js"></script>
     <title>Recaptcha</title>
 </head>
 <body>
     <div id="container">
-        <form action="/" method="POST">
+        <form action="" method="POST" id="form">
             <div class="form-control">
               <input type="text" name="fName" placeholder="First name" class="form-input" required>
             </div>
