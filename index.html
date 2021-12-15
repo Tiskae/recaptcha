@@ -32,12 +32,14 @@
              data-expired-callback="expiredCallback"
              data-error-callback="errorCallback"></div>
             
-            <input type="submit" value="Submit" disabled>
+            <input type="submit" value="Submit" disabled class="submit-btn">
           </form>
     </div>
     <script type="text/javascript">
         function recaptcha_callback (token){ 
-            alert(`submitted successfully! with token ${token}`)
+            // alert(`submitted successfully! with token ${token}`)
+            const submitBtn = document.querySelector(".submit-btn")
+            submitBtn.removeAttribute("disabled")
         };
         function expiredCallback(){alert("token expired")};
         function errorCallback () {alert("something went wrong")};
