@@ -5,7 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script defer src="app.js"></script>
+    <script defer src='https://www.google.com/recaptcha/api.js'></script>
+    <script>
+        function onSubmit(token) {
+          alert("Submitted successfully!")
+        }
+      </script>
     <title>Recaptcha</title>
 </head>
 <body>
@@ -29,11 +34,10 @@
             <div class="modal-form__btn-wrapper">
                 <button class="g-recaptcha" 
         data-sitekey="6Lf4H6MdAAAAAL3zAvYv1I4NKslyXnotcXQFc7MR" 
-        data-callback='o' 
+        data-callback='onSubmit' 
         data-action='submit'>Submit</button>
             </div>
           </form>
     </div>
-<script src='https://www.google.com/recaptcha/api.js'></script>
 </body>
 </html>
