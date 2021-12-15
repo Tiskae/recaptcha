@@ -7,10 +7,10 @@
     <link rel="stylesheet" href="style.css">
     <script async defer src='https://www.google.com/recaptcha/api.js'></script>
     <script defer src="app.js"></script>
-    <script>
-        const onSubmit = (token)=>alert(`submitted successfully! with token ${token}`)
-        const expiredCallback = ()=> alert("token expired")
-        const errorCallback = ()=> alert("something went wrong")
+    <script defer type="text/javascript">
+        const onSubmit = (token)=> alert(`submitted successfully! with token ${token}`);
+        const expiredCallback = ()=> alert("token expired");
+        const errorCallback = ()=> alert("something went wrong");
     </script>
     <title>Recaptcha</title>
 </head>
