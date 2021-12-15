@@ -28,7 +28,7 @@
                 <div class="g-recaptcha" data-sitekey="6LeEF6MdAAAAACgU_l5Ufy34ol9L0T0Nf06UfR8y"></div>
             </div> -->
             <div class="g-recaptcha" data-sitekey="6Lf0eKMdAAAAABxYVzvD_mGi7zLjoLiCDzvfBxuQ"
-             data-callback="recaptchaFallback"
+             data-callback="recaptcha_callback"
              data-expired-callback="expiredCallback"
              data-error-callback="errorCallback"></div>
             
@@ -36,10 +36,11 @@
           </form>
     </div>
     <script type="text/javascript">
-        const recaptchaFallback = (token)=>{ 
-            alert(`submitted successfully! with token ${token}`)};
-        const expiredCallback = ()=> alert("token expired");
-        const errorCallback = ()=> alert("something went wrong");
+        function recaptcha_callback (token){ 
+            alert(`submitted successfully! with token ${token}`)
+        };
+        function expiredCallback(){alert("token expired")};
+        function errorCallback () {alert("something went wrong")};
     </script>
 </body>
 </html>
